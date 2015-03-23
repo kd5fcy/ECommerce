@@ -51,7 +51,7 @@
 			<tr>
 				<td>Qty</td>
 				<td>Description</td>
-				<td>Price</td>
+				<td class='right'>Price</td>
 				<td></td>
 			</tr>
 		</thead>
@@ -84,7 +84,12 @@
 							echo '<td>' . $value . '</td>';
 						}
 					}
+					if($qty > 1){
 					echo "<td class='right'>$" . $price . " X " . $qty . " = $" . ($price * $qty) . "</td><td><a href='/products/delete/" . $id . "'><button>Delete</button></a></td></tr>";
+					}
+					else{
+						echo "<td class='right'>$" . $price . "</td><td><a href='/products/delete/" . $id . "'><button>Delete</button></a></td></tr>";						
+					}
 					$total = $total + ($price * $qty);
 				}
 			}
