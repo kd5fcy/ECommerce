@@ -52,7 +52,7 @@
 			</tr>
 		</thead>
 		<tbody>
-		<?
+		<?php
 			$cart = $this->session->userdata('cart');
 			$total = 0;
 			if($this->session->userdata('cart'))
@@ -90,7 +90,7 @@
 			<tr>
 				<td></td>
 				<td>Total:</td>
-				<td>$<?= $total ?></td>
+				<td>$<?php echo $total; ?></td>
 				<td></td>
 			</tr>
 		</tfoot>
