@@ -44,10 +44,10 @@
 </head>
 <body>
 	<h1>Products</h1>
-	<?
+	<?php
 		
 	?>
-	<h2><a href='/products/cart'>Your Cart <? if($this->session->userdata('cart')){echo '(' . COUNT($this->session->userdata('cart')) . ')';}else{echo '(Empty)';} ?></a></h2>
+	<h2><a href='/products/cart'>Your Cart <?php if($this->session->userdata('cart')){echo '(' . COUNT($this->session->userdata('cart')) . ')';}else{echo '(Empty)';} ?></a></h2>
 <?php
 	$query = 'SELECT id, description, price FROM products';
 	$products =	$this->db->query($query);	
@@ -60,7 +60,7 @@
 				<td></td>
 			</thead>
 			<tbody>
-			<?
+			<?php
 				foreach ($products->result() as $key) 
 				{
 					echo '<tr>';
