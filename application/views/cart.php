@@ -80,7 +80,7 @@
 							echo '<td>' . $value . '</td>';
 						}
 					}
-					echo "<td>$" . ($price * $qty) . "</td><td><a href='/products/delete/" . $id . "'><button>Delete</button></a></td></tr>";
+					echo "<td>$" . $price . " X " . $qty . " = " . ($price * $qty) . "</td><td><a href='/products/delete/" . $id . "'><button>Delete</button></a></td></tr>";
 					$total = $total + ($price * $qty);
 				}
 			}
