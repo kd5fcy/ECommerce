@@ -2,6 +2,10 @@
 <head>
 	<title>Cart</title>
 	<style type="text/css">
+		.right
+		{
+			text-align: right;
+		}
 		body
 		{
 			padding: 20px;	
@@ -80,7 +84,7 @@
 							echo '<td>' . $value . '</td>';
 						}
 					}
-					echo "<td>$" . $price . " X " . $qty . " = " . ($price * $qty) . "</td><td><a href='/products/delete/" . $id . "'><button>Delete</button></a></td></tr>";
+					echo "<td class='right'>$" . $price . " X " . $qty . " = $" . ($price * $qty) . "</td><td><a href='/products/delete/" . $id . "'><button>Delete</button></a></td></tr>";
 					$total = $total + ($price * $qty);
 				}
 			}
@@ -90,7 +94,7 @@
 			<tr>
 				<td></td>
 				<td>Total:</td>
-				<td>$<?php echo $total; ?></td>
+				<td class='right'>$<?php echo $total; ?></td>
 				<td></td>
 			</tr>
 		</tfoot>
