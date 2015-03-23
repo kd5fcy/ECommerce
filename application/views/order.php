@@ -1,4 +1,4 @@
-<?
+<?php
 //$this->session->unset_userdata('user_data');
 //$this->session->unset_userdata('items');
 //$this->session->unset_userdata('item');
